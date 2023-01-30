@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="coffee_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ckl0lpi.css">
     <title>Ethan Robinson &mdash; Web Developer</title>
     <style>
         /* Colors:
@@ -16,12 +17,13 @@
         */
 
         * {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'roc-grotesk', sans-serif;
+            color:#434f40;
 
         }
         #header {
            width: 100%;
-           background-color: #959d93;
+           background-color: #434f40;
            position: sticky;
            top:0;
            display:flex;
@@ -35,6 +37,7 @@
             font-weight: bold;
             padding:25px;
             transition: 0.2s ease-in-out;
+            color:#f5f8f5;
         }
         .nav_item a{
             color:#f5f8f5;
@@ -45,7 +48,7 @@
             text-shadow: 3px 3px 5px #434f40;
         }
         #hero{
-            padding:150px;
+            padding:100px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -54,23 +57,28 @@
         }
         #hero_photo{
             background-image: url(me.JPG);
-            height: 800px;
-            width: 800px;
+            height: 500px;
+            width: 500px;
             border-radius: 50%;
             background-size: cover;
             background-position: center;
             box-shadow: 10px 10px 15px #d5d7d5, 0px 0px 50px #dddfdc;
         }
-        h2{
+        #hero h2{
             color: #434f40;
             margin-top: 100px;
+            font-size: 20px;
+            font-weight: 400;
         }
         #hero_text{
-            font-size: 50px;
+            font-family: "roc-grotesk", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 45px;
         }
         #about_me_container {
             background: linear-gradient(117deg, rgba(149,157,147,1) 0%, rgba(67,79,64,1) 100%);
-            padding: 200px 100px;
+            padding: 100px 100px;
             height:auto;
             display: flex;
             flex-direction: column;
@@ -79,32 +87,35 @@
         }
         #about_me {
             color:#434f40;
-            height: 55%;
-            width: 60%;
-            padding:80px;
+            height: 45%;
+            width: 75%;
+            padding:80px 40px;
             background-color: #f5f8f5;
             border-radius: 40px;
             transition: 0.7s ease-in-out;
             display: flex;
             flex-direction: column;
             align-items: center;
+            
         }
         #about_me:hover{
             transform: scale(103%);
             box-shadow: -15px -15px 30px #959d93, 15px 15px 30px #2b302a;
         }
         #about_me_title {
+            font-weight: bold;
             padding:5px;
             position: relative;
             top: -20px;
             margin-bottom: 50px;
-            border-bottom: 2px solid #434f40;
+            border-bottom: 1px solid #434f40;
         }
         #about_me_content{
             width:100%;
             display:flex;
             flex-direction: row; 
-            justify-content: center;
+            justify-content:space-around;
+            flex-wrap: wrap;
         }
         #about_me_photo{
             background-image: url(me2.JPG);
@@ -113,18 +124,57 @@
             background-size: cover;
             background-position: center;
             border-radius: 25px;
+            min-width: 150px;
         }
         #about_me_text {
-            margin-left:5%;
+            margin-top: 5%;
             width:50%;
         }
         #projects_container {
+            padding: 100px;
             background-color: #f5f8f5;
-            height:1200px;
+            height:800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #projects_title{
+            font-weight: bold;
+            padding:5px;
+            width:fit-content;
+            position: relative;
+            top: -20px;
+            margin-bottom: 50px;
+        }
+        #projects_flexbox{
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .projects {
+            width: 300px;
+            margin: 25px;
+            height: 300px;
+            border-radius: 25px;
+            background: linear-gradient(117deg, rgba(149,157,147,1) 0%, rgba(67,79,64,1) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content:end;
+            transition: 0.4s ease-in-out;
+        }
+        .projects:hover {
+            transform: scale(105%);
+            box-shadow: 8px 8px 10px #d5d7d5;
+        }
+        .project_title {
+            color: #f5f8f5;
+            font-weight: 400;
+        }
+        #travellia{
+            background-image: url(me2.JPG);
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
@@ -152,7 +202,15 @@
         </div>
     </div>
     <div id="projects_container">
-
+        <div><h1 id="projects_title">Web Design/Development</h1></div>
+        <div id="projects_flexbox">
+            <a href="" target="_blank"><div class="projects" id=""><h2 class="project_title"></h2></div></a>
+            <a href="" target="_blank"><div class="projects" id=""><h2 class="project_title"></h2></div></a>
+            <a href="" target="_blank"><div class="projects" id=""><h2 class="project_title"></h2></div></a>
+            <a href="" target="_blank"><div class="projects" id=""><h2 class="project_title"></h2></div></a>
+            <a href="" target="_blank"><div class="projects" id=""><h2 class="project_title"></h2></div></a>
+            <a href="" target="_blank"><div class="projects" id=""><h2 class="project_title"></h2></div></a>
+        </div>
     </div>
 </body>
 </html>
