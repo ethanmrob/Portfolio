@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="normalize.css">
     <title>Ethan Robinson &mdash; Web Developer</title>
     <style>
+        /* Colors:
+        Dark green: #434f40
+        Light green: #959d93
+        Gold: #b09867
+        Off-white: #f5f8f5
+        */
+
         * {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
@@ -21,13 +28,22 @@
            justify-content: center;
            align-items:center;
            color: #f5f8f5;
+           z-index: 999;
         }
         .nav_item {
             text-transform: uppercase;
             font-weight: bold;
             padding:25px;
+            transition: 0.2s ease-in-out;
         }
-        
+        .nav_item a{
+            color:#f5f8f5;
+            text-decoration: none;
+        }
+        .nav_item:hover{
+            transform: scale(103%);
+            text-shadow: 3px 3px 5px #434f40;
+        }
         #hero{
             padding:150px;
             display: flex;
@@ -52,9 +68,10 @@
         #hero_text{
             font-size: 50px;
         }
-        #about {
-            background-color: #434f40;
-            height:1200px;
+        #about_me_container {
+            background: linear-gradient(117deg, rgba(149,157,147,1) 0%, rgba(67,79,64,1) 100%);
+            padding: 200px 100px;
+            height:auto;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -66,13 +83,20 @@
             width: 60%;
             padding:80px;
             background-color: #f5f8f5;
-            box-shadow: -10px -10px 0px #b09867, 10px 10px 0px #2b302a;
+            border-radius: 40px;
+            transition: 0.7s ease-in-out;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+        #about_me:hover{
+            transform: scale(103%);
+            box-shadow: -15px -15px 30px #959d93, 15px 15px 30px #2b302a;
+        }
         #about_me_title {
-            padding:15px;
+            padding:5px;
+            position: relative;
+            top: -20px;
             margin-bottom: 50px;
             border-bottom: 2px solid #434f40;
         }
@@ -88,16 +112,25 @@
             width: 400px;
             background-size: cover;
             background-position: center;
+            border-radius: 25px;
         }
         #about_me_text {
             margin-left:5%;
             width:50%;
         }
+        #projects_container {
+            background-color: #f5f8f5;
+            height:1200px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
     <div id="header">
-        <div class="nav_item">About Me</div>
+        <div class="nav_item"><a href="#about_me_container">About Me</a></div>
         <div class="nav_item">Projects</div>
         <div class="nav_item">Contact</div>
     </div>
@@ -105,7 +138,7 @@
         <div id="hero_photo"></div>
         <h2><span id="hero_text">I'm Ethan Robinson.</span><br>I'm a web developer, graphic designer, and video editor.</h2>
     </div>
-    <div id="about">
+    <div id="about_me_container">
         <div id="about_me">
             <div><h1 id="about_me_title">About Me</h1></div>
             <div id="about_me_content">
@@ -116,8 +149,10 @@
                     <p>I currently have certifications in HTML5, CSS3, JavaScript, PHP, jQuery, and Python. I have experience with Wordpress and Bootstrap, and I'm either currently learning or planning to learn React, C++, SQL.</p>
                 </div>
             </div>
-
         </div>
+    </div>
+    <div id="projects_container">
+
     </div>
 </body>
 </html>
