@@ -14,13 +14,13 @@
         }
         #header {
            width: 100%;
-           background-color: #434f40;
+           background-color: #959d93;
            position: sticky;
            top:0;
            display:flex;
            justify-content: center;
            align-items:center;
-           color: white;
+           color: #f5f8f5;
         }
         .nav_item {
             text-transform: uppercase;
@@ -35,6 +35,15 @@
             justify-content: center;
             align-items: center;
             background-color: #f5f8f5;
+        }
+        #hero_photo{
+            background-image: url(me.JPG);
+            height: 800px;
+            width: 800px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 10px 10px 15px #d5d7d5, 0px 0px 50px #dddfdc;
         }
         h2{
             color: #434f40;
@@ -62,6 +71,28 @@
             flex-direction: column;
             align-items: center;
         }
+        #about_me_title {
+            padding:15px;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #434f40;
+        }
+        #about_me_content{
+            width:100%;
+            display:flex;
+            flex-direction: row; 
+            justify-content: center;
+        }
+        #about_me_photo{
+            background-image: url(me2.JPG);
+            height: 500px;
+            width: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+        #about_me_text {
+            margin-left:5%;
+            width:50%;
+        }
     </style>
 </head>
 <body>
@@ -71,15 +102,15 @@
         <div class="nav_item">Contact</div>
     </div>
     <div id="hero">
-        <div style="background-image: url(me.JPG); height: 800px; width: 800px; border-radius: 50%; background-size: cover; background-position: center; box-shadow: 10px 10px 15px #d5d7d5, 0px 0px 50px #dddfdc;"> </div>
+        <div id="hero_photo"></div>
         <h2><span id="hero_text">I'm Ethan Robinson.</span><br>I'm a web developer, graphic designer, and video editor.</h2>
     </div>
     <div id="about">
         <div id="about_me">
-            <div><h1 style="padding:15px;margin-bottom: 50px;border-bottom:2px solid #434f40">About Me</h1></div>
-            <div style="width:100%;display:flex;flex-direction: row; justify-content: center; ">
-                <div style="background-image: url(me2.JPG); height: 500px; width: 400px; background-size: cover; background-position: center;"> </div>
-                <div style="margin-left:5%; width:50%;">
+            <div><h1 id="about_me_title">About Me</h1></div>
+            <div id="about_me_content">
+                <div id="about_me_photo"></div>
+                <div id="about_me_text">
                     <p>Hey there! Thanks for visiting my site! My name's Ethan, and I'm a web developer in the Atlanta area. I also have experience in photography, video editing/production, and graphic design.</p>
                     <p>I've worked on various projects since I started learning how to code in middle school. Since my first coding course in 2015 and continually since then (admittedly on and off at times), I've been able to learn so much about the wonderful world of coding, and I'm still just getting started.</p>
                     <p>I currently have certifications in HTML5, CSS3, JavaScript, PHP, jQuery, and Python. I have experience with Wordpress and Bootstrap, and I'm either currently learning or planning to learn React, C++, SQL.</p>
