@@ -47,12 +47,19 @@
             transform: scale(103%);
             text-shadow: 3px 3px 5px #434f40;
         }
-        #hero{
-            padding:100px;
+        .container{
+            padding: 200px 100px;
+            height: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+        .green-container{
+            background: linear-gradient(117deg, rgba(149,157,147,1) 0%, rgba(67,79,64,1) 100%);
+        }
+        #hero{
+            padding:100px;
             background-color: #f5f8f5;
         }
         #hero_photo{
@@ -77,13 +84,8 @@
             font-size: 45px;
         }
         #about_me_container {
-            background: linear-gradient(117deg, rgba(149,157,147,1) 0%, rgba(67,79,64,1) 100%);
             padding: 100px 100px;
             height:auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
         #about_me {
             color:#434f40;
@@ -131,12 +133,7 @@
             width:50%;
         }
         #projects_container {
-            padding: 100px;
             background-color: #f5f8f5;
-            height:800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         #projects_title{
             font-weight: bold;
@@ -157,38 +154,96 @@
             height: 300px;
             border-radius: 25px;
             background: linear-gradient(117deg, rgba(149,157,147,1) 0%, rgba(67,79,64,1) 100%);
+            text-decoration: none;
             display: flex;
             flex-direction: column;
             align-items:center;
-            justify-content:end;
+            justify-content:center;
             transition: 0.4s ease-in-out;
         }
         .projects:hover {
             transform: scale(105%);
             box-shadow: 8px 8px 10px #d5d7d5;
         }
-        .project_title {
+        .project_name {
             color: #f5f8f5;
-            font-weight: 400;
+            font-family: roc-grotesk, sans-serif;
+            letter-spacing: 2px;
+            font-size: 180%;
+            font-weight: 500;
+            /* text-transform: uppercase; */
+            text-shadow: 0 3px 10px rgba(67, 79, 64, 1);
         }
         #travellia{
-            background-image: url(me2.JPG);
+            background-image: linear-gradient(to bottom,  rgba(149,157,147,0), rgba(149,157,147,0), rgba(67, 79, 64, 0.3)), url(travellia/travellia.jpeg);
+            background-size: cover;
+            background-position: right;
+        }
+        #homeward{
+            background-image: linear-gradient(to bottom,  rgba(149,157,147,0), rgba(149,157,147,0), rgba(67, 79, 64, 0.3)), url(homeward/DSC_0196.JPG);
             background-size: cover;
             background-position: center;
+        }
+        #del-sol{
+            background-image: linear-gradient(to bottom,  rgba(149,157,147,0), rgba(149,157,147,0), rgba(67, 79, 64, 0.3)), url(del-sol/sunflower3.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .project_grid a{
+            text-decoration: none;
+            border-bottom:none;
+        }
+        #contact_me_title{
+            color: #f5f8f5;
+        }
+        #contact-form{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            width:80%;
+        }
+        #contact-info{
+            flex-direction: column;
+        }
+        #contact-message{
+            flex-direction: column;
+        }
+        .form-items{
+            padding:10px;
+            color: #f5f8f5;
+        }
+        .form-items p{
+            color:#f5f8f5;
+        }
+        .form-items input{
+            padding: 20px;
+            width: 300px;
+            border-radius: 25px;
+            border: none;
+            box-shadow: inset 5px 5px 10px #959d93, 5px 5px 10px #7a8378;
+        }
+        #form-submit{
+            margin: 50px;
+            padding: 15px;
+            width: 120px;
+            border-radius: 25px;
+            border: none;
+            background-color: #f5f8f5;
+            color: #434f40;
         }
     </style>
 </head>
 <body>
     <div id="header">
         <div class="nav_item"><a href="#about_me_container">About Me</a></div>
-        <div class="nav_item">Projects</div>
-        <div class="nav_item">Contact</div>
+        <div class="nav_item"><a href="#projects_container">Projects</a></div>
+        <div class="nav_item"><a href="#contact_container">Contact</a></div>
     </div>
-    <div id="hero">
+    <div id="hero" class="container">
         <div id="hero_photo"></div>
         <h2><span id="hero_text">I'm Ethan Robinson.</span><br>I'm a web developer, graphic designer, and video editor.</h2>
     </div>
-    <div id="about_me_container">
+    <div id="about_me_container" class="green-container container">
         <div id="about_me">
             <div><h1 id="about_me_title">About Me</h1></div>
             <div id="about_me_content">
@@ -201,12 +256,55 @@
             </div>
         </div>
     </div>
-    <div id="projects_container">
+    <div id="projects_container" class="light-container container">
         <div><h1 id="projects_title">Projects</h1></div>
         <div id="projects_flexbox">
-            <a href="" target="_blank"><div class="projects" id=""><h2 class="project_title"></h2></div></a>
-            <a href="" target="_blank"><div class="projects" id=""><h2 class="project_title"></h2></div></a>
+            <div class="project_grid">
+                <a href="travellia/index.html" target="_blank">
+                    <div class="projects" id="travellia">
+                        <h2 class="project_name">Travellia</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="project_grid">
+                <a href="homeward/homeward.html" target="_blank">
+                    <div class="projects" id="homeward">
+                        <h2 class="project_name">Homeward</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="project_grid">
+                <a href="del-sol/del-sol bootstrap.html" target="_blank">
+                    <div class="projects" id="del-sol">
+                        <h2 class="project_name">Del Sol</h2>
+                    </div>
+                </a>
+            </div>
         </div>
+    </div>
+    <div id="contact_container" class="green-container container">
+        <div>
+            <h1 id="contact_me_title">Contact Me</h1>
+        </div>
+        <div id="contact-form">
+            <div id="contact-info">
+                <form>
+                    <div class="form-items"><p>Your Name</p><input type="text" placeholder="Your name"></div>
+                    <div class="form-items"><p>Subject</p><input type="text" placeholder="Reason for your message"></div>
+                    <div class="form-items"><p>Email Address</p><input type="email" placeholder="Your email address"></div>
+                </form>
+            </div>
+            <div id="contact-message">
+                <form>
+                    <div class="form-items">
+                        <p>Message</p>
+                        <input style="height: 280px;" type="text">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <input id="form-submit" type="submit">
     </div>
 </body>
 </html>
