@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="coffee_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ckl0lpi.css">
+    <title>Ethan Robinson &mdash; Web Developer</title>
+    <style>
+        /* Colors:
+        Dark green: #434f40
+        Light green: #959d93
+        Gold: #b09867
+        Off-white: #f5f8f5
+        */
+
+        * {
+            color:#434f40;
+
+        }
+        body{
+            font-family: 'neue-haas-grotesk-text', sans-serif;
+            font-weight: 300;
+        }
+        h1, h2, h3 {
+            font-family: "filmotype-maxwell", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 250%;
+        }
+        #header {
+           width: 100%;
+           background-color: #434f40;
+           position: sticky;
+           top:0;
+           display:flex;
+           justify-content: center;
+           align-items:center;
+           color: #f5f8f5;
+           z-index: 999;
+        }
+        .nav_item {
+            text-transform: uppercase;
+            font-weight: bold;
+            padding:25px;
+            transition: 0.2s ease-in-out;
+            color:#f5f8f5;
+        }
+        .nav_item a{
+            color:#f5f8f5;
+            text-decoration: none;
+        }
+        .nav_item:hover{
+            transform: scale(103%);
+            text-shadow: 3px 3px 5px #434f40;
+        }
+        .container{
+            padding: 200px 100px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .green-container{
+            background: linear-gradient(117deg, rgba(149,157,147,1) 0%, rgba(67,79,64,1) 100%);
+        }
+        #hero{
+            padding:100px;
+            background-color: #f5f8f5;
+        }
+        #hero img{
+            max-width:600px;
+            border-radius: 50%;
+            margin-bottom: 50px;
+            box-shadow: 0px 0px 10px #7a8378;
+        }
+        
+        #hero h4{
+            color: #434f40;
+            margin-top: 60px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        #hero_text{
+            font-family: "filmotype-maxwell", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 70px;
+        }
+        #about_me_container {
+            padding: 100px 100px;
+            height:auto;
+        }
+        #about_me {
+            color:#434f40;
+            height: 45%;
+            width: 75%;
+            padding:80px 40px;
+            background-color: #f5f8f5;
+            border-radius: 40px;
+            transition: 0.7s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        #about_me:hover{
+            transform: scale(103%);
+            box-shadow: -15px -15px 30px #959d93, 15px 15px 30px #2b302a;
+        }
+        #about_me_title {
+            font-weight: bold;
+            padding:5px;
+            position: relative;
+            top: -20px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #434f40;
+        }
+        #about_me_content{
+            width:100%;
+            display:flex;
+            flex-direction: row; 
+            justify-content:space-around;
+            flex-wrap: wrap;
+        }
+        #about_me_photo{
+            background-image: url(me2.JPG);
+            height: 500px;
+            width: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 25px;
+            min-width: 150px;
+        }
+        #about_me_text {
+            margin-top: 5%;
+            width:50%;
+        }
+        #projects_container {
+            background-color: #f5f8f5;
+        }
+        #projects_title{
+            font-weight: bold;
+            padding:5px;
+            width:fit-content;
+            position: relative;
+            top: -20px;
+            margin-bottom: 50px;
+        }
+        #projects_flexbox{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .projects {
+            width: 400px;
+            margin: 25px;
+            height: 400px;
+            border-radius: 25px;
+            background: linear-gradient(117deg, rgba(149,157,147,1) 0%, rgba(67,79,64,1) 100%);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content:center;
+            transition: 0.4s ease-in-out;
+            overflow: hidden;
+        }
+        .projects:hover {
+            transform: scale(105%);
+            box-shadow: 8px 8px 10px #d5d7d5;
+        }
+        .project_name {
+            color: #f5f8f5;
+            letter-spacing: 1px;
+            font-size: 140%;
+            font-weight: 500;
+            /* text-transform: uppercase; */
+            margin:25px 0px;
+        }
+        #travellia{
+            background-image: linear-gradient(to bottom,  rgba(149,157,147,0), rgba(149,157,147,0), rgba(67, 79, 64, 0.3)), url(travellia/travellia.jpeg);
+            background-size: cover;
+            background-position: right;
+        }
+        #homeward{
+            background-image: linear-gradient(to bottom,  rgba(149,157,147,0), rgba(149,157,147,0), rgba(67, 79, 64, 0.3)), url(homeward/DSC_0196.JPG);
+            background-size: cover;
+            background-position: center;
+        }
+        #del-sol{
+            background-image: linear-gradient(to bottom,  rgba(149,157,147,0), rgba(149,157,147,0), rgba(67, 79, 64, 0.3)), url(del-sol/sunflower3.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .project_grid a{
+            text-decoration: none;
+            border-bottom:none;
+        }
+        #contact_me_title{
+            color: #f5f8f5;
+        }
+        #contact-form{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            width:80%;
+        }
+        #contact-info{
+            flex-direction: column;
+        }
+        #contact-message{
+            flex-direction: column;
+        }
+        .form-items{
+            padding:10px;
+            color: #f5f8f5;
+        }
+        .form-items p{
+            color:#f5f8f5;
+        }
+        .form-items input{
+            padding: 20px;
+            width: 300px;
+            border-radius: 25px;
+            border: none;
+            box-shadow: inset 5px 5px 10px #959d93, 5px 5px 10px #7a8378;
+        }
+        #form-submit{
+            margin: 50px;
+            padding: 15px;
+            width: 120px;
+            border-radius: 25px;
+            border: none;
+            background-color: #f5f8f5;
+            color: #434f40;
+        }
+        .content{
+            position:relative;
+            height:100%;
+            top:325px;
+            background: rgb(149,157,147);
+            background: linear-gradient(128deg, rgba(149,157,147,0.8) 0%, rgba(84,91,82,0.8) 100%);
+            text-align: center;
+            transition: 0.4s ease-in-out;
+        }
+        .content p{
+            width:80%;
+            margin: 0 auto;
+            color:white;
+        }
+        .content:hover{
+            top:100px;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="nav_item"><a href="#about_me_container">About Me</a></div>
+        <div class="nav_item"><a href="#projects_container">Projects</a></div>
+        <div class="nav_item"><a href="#contact_container">Contact</a></div>
+    </div>
+        <section id="hero" class="container">
+            <img src="me-selfie.JPG">
+            <h4><span id="hero_text">I'm Ethan Robinson.</span><br>I'm a web developer, graphic designer, and video editor.</h4>
+        </section>
+        <section id="about_me_container" class="green-container container">
+            <div id="about_me">
+                <div><h1 id="about_me_title">About Me</h1></div>
+                <div id="about_me_content">
+                    <div id="about_me_photo"></div>
+                    <div id="about_me_text">
+                        <p>Hey there! Thanks for visiting my site! My name's Ethan, and I'm a web developer in the Atlanta area. I also have experience in photography, video editing/production, and graphic design.</p>
+                        <p>I've worked on various projects since I started learning how to code in middle school. Since my first coding course in 2015 and continually since then (admittedly on and off at times), I've been able to learn so much about the wonderful world of coding, and I'm still just getting started.</p>
+                        <p>I currently have certifications in HTML5, CSS3, JavaScript, PHP, jQuery, and Python. I have experience with Wordpress and Bootstrap, and I'm either currently learning or planning to learn React, C++, SQL.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects_container" class="light-container container">
+            <div><h1 id="projects_title">Projects</h1></div>
+            <div id="projects_flexbox">
+                <div class="project_grid">
+                    <a href="travellia/index.html" target="_blank">
+                        <div class="projects" id="travellia">
+                            <div class="content">
+                                <h4 class="project_name">Travellia</h4>
+                                <p>This was an attempt at a trip-booking site. I wanted to design the front page of a website that would allow users to schedule vacations in different parts of the world.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project_grid">
+                    <a href="homeward/homeward.html" target="_blank">
+                        <div class="projects" id="homeward">
+                            <div class="content">
+                                <h4 class="project_name">Homeward</h4>
+                                <p>This was a sample homepage I tried to build using Bootstrap. I wanted to see what it would look like to use an image as the full-screen background.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project_grid">
+                    <a href="del-sol/del-sol bootstrap.html" target="_blank">
+                        <div class="projects" id="del-sol">
+                            <div class="content">
+                                <h4 class="project_name">Del Sol</h4>
+                                <p>This was built using Bootstrap. I was testing out various features, such as having a rotating gallery on the homepage, and how to scale images to fit correctly on a site.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div id="contact_container" class="green-container container">
+            <div>
+                <h1 id="contact_me_title">Contact Me</h1>
+            </div>
+            <div id="contact-form">
+                <div id="contact-info">
+                    <form>
+                        <div class="form-items"><p>Your Name</p><input type="text" placeholder="Your name"></div>
+                        <div class="form-items"><p>Subject</p><input type="text" placeholder="Reason for your message"></div>
+                        <div class="form-items"><p>Email Address</p><input type="email" placeholder="Your email address"></div>
+                    </form>
+                </div>
+                <div id="contact-message">
+                    <form>
+                        <div class="form-items">
+                            <p>Message</p>
+                            <input style="height: 280px;" type="text">
+                        </div>
+        
+                    </form>
+                </div>
+            </div>
+            <input id="form-submit" type="submit">
+        </div>
+</body>
+</html>

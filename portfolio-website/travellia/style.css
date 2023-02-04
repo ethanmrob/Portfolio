@@ -1,0 +1,345 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+p, h1, h2, h3, h4, h5, a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    height:auto;
+    display: grid;
+    gap:30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.18fr 1fr 1fr 1.5fr 0.8fr 1.5fr 1.5fr 0.5fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Logo Logo Header Header Header Header Header Header Header"
+      "Product Product Product Product Product Product Product Product Product"
+      "Product Product Product Product Product Product Product Product Product"
+      "Team-Member Team-Member Team-Member Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action"
+      "Reason-1 Reason-1 Reason-1 Reason-2 Reason-2 Reason-2 Reason-3 Reason-3 Reason-3"
+      "Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial"
+      "Contact-Us Contact-Us Contact-Us Contact-Us Contact-Us Contact-Us Social-Media Social-Media Social-Media"
+      "Footer Footer Footer Footer Footer Footer Footer Footer Footer";
+  }
+
+
+  .Logo { 
+      display: flex;
+      grid-area: Logo; 
+      align-items:center;
+      justify-content: start;
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(255, 255, 255) 100%);
+   }
+
+    #logo {
+        margin-left:50px;
+        margin-right:10px;
+       
+    }
+
+    #logoText {
+        font-family: 'Dancing Script', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding-top:5px;
+        color:black;
+        background: -webkit-linear-gradient(180deg, #cc9577, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+  .Header {
+      grid-area: Header; 
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom:-10px;
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(255, 255, 255) 100%);
+    }
+
+    .link {
+        font-size:12px;
+        width: auto;
+        margin-right:90px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color:black;
+        text-decoration: none;
+        padding-bottom:2px;
+        transition: color 200ms ease-in;
+      }
+
+    .link:hover {
+        border-bottom: 2px solid #8E5F46;
+        color:#8E5F46;
+    }
+  
+  .Product {
+      grid-area: Product;
+      display: flex;
+      background-image: linear-gradient(0deg, rgba(172, 51, 51, 0) 90%, rgba(255,255,255,1) 100%), url("https://images.pexels.com/photos/5966303/pexels-photo-5966303.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      height:800px;
+    }
+
+    .cursive {
+        font-family: 'Dancing Script', sans-serif;
+        font-size:70px;
+        color:#8E5F46;
+    }
+
+    .heading {
+      position:relative;
+      top:100px;
+      right:270px;
+      padding-top:20px;
+        color:black;
+        width:700px;
+        height:120px;
+        font-weight:300;
+        font-size: 30px;
+        background-color:rgb(255, 255, 255, 0.9);
+    }
+    .heading-border {
+      position:absolute;
+      top:515px;
+      left:70px;
+      width:695px;
+      height:130px;
+      border: 5px solid #8E5F46;
+    }
+
+    .Reason {
+        padding-top:90px;
+        text-align: center;
+        color:white;
+        letter-spacing: 2px;
+        transition: all 400ms ease-in;
+        margin:30px 15px;
+        box-shadow:
+          0 1px 3.5px rgba(0, 0, 0, 0.025),
+          0 3.4px 15.7px rgba(0, 0, 0, 0.081),
+          0 15px 21px rgba(0, 0, 0, 0.26)
+        ;
+        border-radius: 15px;
+
+    }
+
+    .Reason:hover,
+    .Reason:focus {
+      transform: scale(1.02);
+    }
+
+    .Reason > h1 {
+        font-family: 'Dancing Script', sans-serif;
+        font-size: 50px;
+        font-weight:700;
+    }
+
+    .tourButton {
+        font-family:'Montserrat', sans-serif;
+        font-size: 12px;
+        font-weight:600;
+        background-color:white;
+        padding:10px;
+        border: 2px solid white;
+        border-radius: 25px;
+        background:none;
+        margin-top: 5px;
+        color:white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 150ms ease-in;
+    }
+
+    .tourButton:hover {
+      color: #8E5F46;
+      background-color:white;
+    }
+  
+  .Europe { 
+      grid-area: Reason-1; 
+      background-color:#FFFFFA;
+      background-image: radial-gradient(circle, rgba(107, 107, 107, 0.2) 0%, rgba(142,95,70,0.1) 100%), url("https://images.pexels.com/photos/4388164/pexels-photo-4388164.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-left:30px;
+    }
+  
+  .Asia {
+      grid-area: Reason-2;
+      background-color:#DDDEE3; 
+      background-image: radial-gradient(circle, rgba(107, 107, 107, 0.2) 0%, rgba(142,95,70,0.1) 100%), url("https://images.pexels.com/photos/6440083/pexels-photo-6440083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  
+  .Africa {
+      grid-area: Reason-3; 
+      background-color:#65697B;
+      background-image: radial-gradient(circle, rgba(107, 107, 107, 0.2) 0%, rgba(142,95,70,0.1) 100%), url("https://images.pexels.com/photos/4577147/pexels-photo-4577147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right:30px;
+    }
+
+  .Call-to-Action { 
+      grid-area: Call-to-Action;
+      background-color: white;
+      text-align: center;
+      padding:100px 200px 0 200px;
+    }
+
+    .headerText {
+      color:#8E5F46;
+      font-family: 'Dancing Script', cursive;
+      font-size:50px;
+      font-weight:700;
+    }
+
+    .Call-to-Action > p {
+      color: #28292A;
+      font-size:16px;
+      text-align: justify;
+      line-height: 22px;
+      font-weight:500;
+      margin:30px 0;
+    }
+
+    .Call-to-Action button {
+      color:#8E5F46;
+      border-color: #8E5F46;
+    }
+
+    .Call-to-Action button:hover {
+      color:white;
+      background-color:#8E5F46;
+    }
+
+    .Team-Member {
+      grid-area: Team-Member;
+      background-color:orange;
+      background-image: url("https://images.pexels.com/photos/5966342/pexels-photo-5966342.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .Testimonial {
+      display:flex;
+      grid-area: Testimonial;
+      background-color: purple;
+      background: linear-gradient(0deg, rgba(207, 207, 207, 0.1) 95%, rgb(61, 61, 61, 0.6) 100%), url("https://images.pexels.com/photos/5967540/pexels-photo-5967540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .testimonial-border {
+      position:relative;
+      bottom:10px;
+      left:10px;
+      width:795px;
+      height:255px;
+      border: 5px solid #8E5F46;
+    }
+
+    .Testimonial h3 {
+      font-style: italic;
+      position:absolute;
+      font-weight:400;
+      letter-spacing: 1px;
+      font-size:18px;
+      line-height: 22px;
+      color:white;
+      padding:50px;
+      width: 700px;
+      height:160px;
+      background-color: white;
+      color:#28292A;
+
+    }
+
+    .signature {
+      font-style:normal;
+      color:#8E5F46;
+      margin-left:30px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 30px;
+    }
+
+    
+  .Contact-Us {
+      grid-area: Contact-Us; 
+      background-color:white;
+      justify-content: center;
+      justify-items: center;
+      width:70%;
+      margin: 0 auto;
+      position:relative;
+      top:50px;
+    }
+
+    .Contact-Us p {
+      font-weight: 400;
+      margin: 10px 0;
+    }
+
+    .contactform {
+      margin-top:30px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+  input[type=text], input[type=email], textarea {
+    width:100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top:6px;
+    margin-bottom:16px;
+    resize:vertical;
+  }
+
+  input[type=submit] {
+    color:#8E5F46;
+    border-color: #8E5F46;
+  }
+
+  input[type=submit]:hover {
+    color:white;
+    background-color:#8E5F46;
+  }
+
+  input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .Social-Media { 
+      grid-area: Social-Media;
+      background-image: url("https://images.pexels.com/photos/5966900/pexels-photo-5966900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius:46% 54% 34% 66% / 63% 27% 73% 37%;
+      margin-right:50px;
+    }
+
+    
+  
