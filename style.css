@@ -47,7 +47,7 @@
             text-shadow: 3px 3px 5px #434f40;
         }
         .container{
-            padding: 200px 100px;
+            padding: 150px 100px;
             height: auto;
             display: flex;
             flex-direction: column;
@@ -232,6 +232,15 @@
             background-color: #f5f8f5;
             color: #434f40;
         }
+        .form-items textarea{
+            border-radius: 25px;
+            padding: 15px;
+            border: 0px;
+            width: 450px;
+            height:300px;
+            box-shadow: inset 5px 5px 10px #959d93, 5px 5px 10px #7a8378;
+
+        }
         .content{
             position:relative;
             width: 100%;
@@ -251,11 +260,13 @@
             top:100px;
             border-radius: 25px;
         }    
-        .coming-soon{
-            background: url(construction.svg);
-            background-size: cover;
-            background-position: center;
-        }    
+        .footer{
+            background-color: #2b302a;
+            padding:20px;
+        } 
+        .footer p{
+            color: #f5f8f5;
+        }  
         @media only screen and (max-width: 768px) {
             #hero img{
                 max-width: 300px;
@@ -300,5 +311,9 @@
             #form-submit{
                 background-color: #434f40;
                 color: #f5f8f5;
+            }
+            .form-items textarea{
+                width: 100%;
+                padding:0;
             }
         }
