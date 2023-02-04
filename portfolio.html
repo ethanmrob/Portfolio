@@ -15,9 +15,11 @@
         Gold: #b09867
         Off-white: #f5f8f5
         */
+        
 
         * {
             color:#434f40;
+            background-color: rgba(255, 0, 0, 0.1);
 
         }
         body{
@@ -127,37 +129,7 @@
             justify-content:space-around;
             flex-wrap: wrap;
         }
-
-        @media only screen and (max-width: 768px) {
-            #hero img{
-                max-width: 300px;
-                margin:0;
-            }
-            .container{
-                padding: 50px 50px;
-            }
-            .green-container{
-                background: #f5f8f5;
-            }
-            #about_me_container{
-                padding:0;
-            }
-            #about_me{
-                padding:0;
-                width:100%;
-            }
-            #about_me:hover{
-            transform: none;
-            box-shadow: none;
-            }
-            #contact-form{
-                width: 100%;
-                padding: 0;
-                display: flex;
-                flex-direction: column !important;
-                justify-content: center;
-            }
-        }
+        
         #about_me_photo{
             background-image: url(me2.JPG);
             height: 500px;
@@ -165,7 +137,7 @@
             background-size: cover;
             background-position: center;
             border-radius: 25px;
-            min-width: 250px;
+            min-width: 150px;
         }
         #about_me_text {
             margin-top: 5%;
@@ -274,6 +246,7 @@
         }
         .content{
             position:relative;
+            width: 100%;
             height:100%;
             top:275px;
             background: rgb(149,157,147);
@@ -289,6 +262,57 @@
         .content:hover{
             top:100px;
             border-radius: 25px;
+        }    
+        .coming-soon{
+            background: url(construction.svg);
+            background-size: cover;
+            background-position: center;
+        }    
+        @media only screen and (max-width: 768px) {
+            #hero img{
+                max-width: 300px;
+                margin:0;
+            }
+            .container{
+                padding: 50px 50px;
+            }
+            .green-container{
+                background: #f5f8f5;
+            }
+            #about_me_container{
+                padding:0;
+            }
+            #about_me{
+                padding:0;
+                width:100%;
+            }
+            #about_me:hover{
+            transform: none;
+            box-shadow: none;
+            }
+            #about_me_photo{
+                height:350px;
+                width:300px;
+            }
+            #contact-form{
+                width: 100%;
+                padding: 0;
+                display: flex;
+                flex-direction: column !important;
+                align-items: center;
+                justify-content: center;
+            }
+            .projects{
+                width:250px;
+                height:250px;
+            }
+            #contact_me_title{
+                color: #434f40;
+            }
+            #form-submit{
+                background-color: #434f40;
+                color: #f5f8f5;
+            }
         }
     </style>
 </head>
@@ -334,16 +358,6 @@
                             <div class="content">
                                 <h4 class="project_name">Homeward</h4>
                                 <p>This was a sample homepage I tried to build using Bootstrap. I wanted to see what it would look like to use an image as the full-screen background.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="project_grid">
-                    <a href="del-sol/del-sol bootstrap.html" target="_blank">
-                        <div class="projects" id="del-sol">
-                            <div class="content">
-                                <h4 class="project_name">Del Sol</h4>
-                                <p>This was built using Bootstrap. I was testing out various features, such as having a rotating gallery on the homepage, and how to scale images to fit correctly on a site.</p>
                             </div>
                         </div>
                     </a>
