@@ -17,9 +17,18 @@
         */
 
         * {
-            font-family: 'roc-grotesk', sans-serif;
             color:#434f40;
 
+        }
+        body{
+            font-family: 'neue-haas-grotesk-text', sans-serif;
+            font-weight: 300;
+        }
+        h1, h2, h3 {
+            font-family: "filmotype-maxwell", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 250%;
         }
         #header {
            width: 100%;
@@ -62,26 +71,24 @@
             padding:100px;
             background-color: #f5f8f5;
         }
-        #hero_photo{
-            background-image: url(me-selfie.JPG);
-            height: 500px;
-            width: 500px;
+        #hero img{
+            max-width:600px;
             border-radius: 50%;
-            background-size: cover;
-            background-position: center;
-            box-shadow: 10px 10px 15px #d5d7d5, 0px 0px 50px #dddfdc;
+            margin-bottom: 50px;
+            box-shadow: 0px 0px 10px #7a8378;
         }
-        #hero h2{
+        
+        #hero h4{
             color: #434f40;
-            margin-top: 100px;
+            margin-top: 60px;
             font-size: 20px;
-            font-weight: 400;
+            font-weight: 300;
         }
         #hero_text{
-            font-family: "roc-grotesk", sans-serif;
-            font-weight: 800;
+            font-family: "filmotype-maxwell", sans-serif;
+            font-weight: 400;
             font-style: normal;
-            font-size: 45px;
+            font-size: 70px;
         }
         #about_me_container {
             padding: 100px 100px;
@@ -160,6 +167,7 @@
             align-items:center;
             justify-content:center;
             transition: 0.4s ease-in-out;
+            overflow: hidden;
         }
         .projects:hover {
             transform: scale(105%);
@@ -167,12 +175,11 @@
         }
         .project_name {
             color: #f5f8f5;
-            font-family: roc-grotesk, sans-serif;
-            letter-spacing: 2px;
-            font-size: 180%;
+            letter-spacing: 1px;
+            font-size: 140%;
             font-weight: 500;
             /* text-transform: uppercase; */
-            text-shadow: 0 3px 10px rgba(67, 79, 64, 1);
+            margin:25px 0px;
         }
         #travellia{
             background-image: linear-gradient(to bottom,  rgba(149,157,147,0), rgba(149,157,147,0), rgba(67, 79, 64, 0.3)), url(travellia/travellia.jpeg);
@@ -231,6 +238,23 @@
             background-color: #f5f8f5;
             color: #434f40;
         }
+        .content{
+            position:relative;
+            height:100%;
+            top:225px;
+            background: rgb(149,157,147);
+            background: linear-gradient(128deg, rgba(149,157,147,0.8) 0%, rgba(84,91,82,0.8) 100%);
+            text-align: center;
+            transition: 0.4s ease-in-out;
+        }
+        .content p{
+            width:80%;
+            margin: 0 auto;
+            color:white;
+        }
+        .content:hover{
+            top:0px;
+        }
     </style>
 </head>
 <body>
@@ -239,72 +263,81 @@
         <div class="nav_item"><a href="#projects_container">Projects</a></div>
         <div class="nav_item"><a href="#contact_container">Contact</a></div>
     </div>
-    <div id="hero" class="container">
-        <div id="hero_photo"></div>
-        <h2><span id="hero_text">I'm Ethan Robinson.</span><br>I'm a web developer, graphic designer, and video editor.</h2>
-    </div>
-    <div id="about_me_container" class="green-container container">
-        <div id="about_me">
-            <div><h1 id="about_me_title">About Me</h1></div>
-            <div id="about_me_content">
-                <div id="about_me_photo"></div>
-                <div id="about_me_text">
-                    <p>Hey there! Thanks for visiting my site! My name's Ethan, and I'm a web developer in the Atlanta area. I also have experience in photography, video editing/production, and graphic design.</p>
-                    <p>I've worked on various projects since I started learning how to code in middle school. Since my first coding course in 2015 and continually since then (admittedly on and off at times), I've been able to learn so much about the wonderful world of coding, and I'm still just getting started.</p>
-                    <p>I currently have certifications in HTML5, CSS3, JavaScript, PHP, jQuery, and Python. I have experience with Wordpress and Bootstrap, and I'm either currently learning or planning to learn React, C++, SQL.</p>
+        <section id="hero" class="container">
+            <img src="me-selfie.JPG">
+            <h4><span id="hero_text">I'm Ethan Robinson.</span><br>I'm a web developer, graphic designer, and video editor.</h4>
+        </section>
+        <section id="about_me_container" class="green-container container">
+            <div id="about_me">
+                <div><h1 id="about_me_title">About Me</h1></div>
+                <div id="about_me_content">
+                    <div id="about_me_photo"></div>
+                    <div id="about_me_text">
+                        <p>Hey there! Thanks for visiting my site! My name's Ethan, and I'm a web developer in the Atlanta area. I also have experience in photography, video editing/production, and graphic design.</p>
+                        <p>I've worked on various projects since I started learning how to code in middle school. Since my first coding course in 2015 and continually since then (admittedly on and off at times), I've been able to learn so much about the wonderful world of coding, and I'm still just getting started.</p>
+                        <p>I currently have certifications in HTML5, CSS3, JavaScript, PHP, jQuery, and Python. I have experience with Wordpress and Bootstrap, and I'm either currently learning or planning to learn React, C++, SQL.</p>
+                    </div>
                 </div>
             </div>
+        </section>
+        <section id="projects_container" class="light-container container">
+            <div><h1 id="projects_title">Projects</h1></div>
+            <div id="projects_flexbox">
+                <div class="project_grid">
+                    <a href="travellia/index.html" target="_blank">
+                        <div class="projects" id="travellia">
+                            <div class="content">
+                                <h4 class="project_name">Travellia</h4>
+                                <p>This was an attempt at a trip-booking site. I wanted to design the front page of a website that would allow users to schedule vacations in different parts of the world.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project_grid">
+                    <a href="homeward/homeward.html" target="_blank">
+                        <div class="projects" id="homeward">
+                            <div class="content">
+                                <h4 class="project_name">Homeward</h4>
+                                <p>This was a sample homepage I tried to build using Bootstrap. I wanted to see what it would look like to use an image as the full-screen background.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project_grid">
+                    <a href="del-sol/del-sol bootstrap.html" target="_blank">
+                        <div class="projects" id="del-sol">
+                            <div class="content">
+                                <h4 class="project_name">Del Sol</h4>
+                                <p>This was built using Bootstrap. I was testing out various features, such as having a rotating gallery on the homepage, and how to scale images to fit correctly on a site.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div id="contact_container" class="green-container container">
+            <div>
+                <h1 id="contact_me_title">Contact Me</h1>
+            </div>
+            <div id="contact-form">
+                <div id="contact-info">
+                    <form>
+                        <div class="form-items"><p>Your Name</p><input type="text" placeholder="Your name"></div>
+                        <div class="form-items"><p>Subject</p><input type="text" placeholder="Reason for your message"></div>
+                        <div class="form-items"><p>Email Address</p><input type="email" placeholder="Your email address"></div>
+                    </form>
+                </div>
+                <div id="contact-message">
+                    <form>
+                        <div class="form-items">
+                            <p>Message</p>
+                            <input style="height: 280px;" type="text">
+                        </div>
+        
+                    </form>
+                </div>
+            </div>
+            <input id="form-submit" type="submit">
         </div>
-    </div>
-    <div id="projects_container" class="light-container container">
-        <div><h1 id="projects_title">Projects</h1></div>
-        <div id="projects_flexbox">
-            <div class="project_grid">
-                <a href="travellia/index.html" target="_blank">
-                    <div class="projects" id="travellia">
-                        <h2 class="project_name">Travellia</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="project_grid">
-                <a href="homeward/homeward.html" target="_blank">
-                    <div class="projects" id="homeward">
-                        <h2 class="project_name">Homeward</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="project_grid">
-                <a href="del-sol/del-sol bootstrap.html" target="_blank">
-                    <div class="projects" id="del-sol">
-                        <h2 class="project_name">Del Sol</h2>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div id="contact_container" class="green-container container">
-        <div>
-            <h1 id="contact_me_title">Contact Me</h1>
-        </div>
-        <div id="contact-form">
-            <div id="contact-info">
-                <form>
-                    <div class="form-items"><p>Your Name</p><input type="text" placeholder="Your name"></div>
-                    <div class="form-items"><p>Subject</p><input type="text" placeholder="Reason for your message"></div>
-                    <div class="form-items"><p>Email Address</p><input type="email" placeholder="Your email address"></div>
-                </form>
-            </div>
-            <div id="contact-message">
-                <form>
-                    <div class="form-items">
-                        <p>Message</p>
-                        <input style="height: 280px;" type="text">
-                    </div>
-                    
-                </form>
-            </div>
-        </div>
-        <input id="form-submit" type="submit">
-    </div>
 </body>
 </html>
